@@ -1,14 +1,19 @@
-import React from 'react';
+import React , {useState} from 'react';
 import './Styles/App.scss';
 import Songs from './Components/Songs';
 import Player from './Components/Player';
+import Data from './Components/data.json'
+
 
 function App() {
+  const [song , setSong] = React.useState(Data)
+  const [currentsong , setCurrentsong] = React.useState(song[0])
+  const [isplaying , setIsplaying] = React.useState(false)
   return (
     <div className="container">
       <h1 id="sexy">Music Player By Nikola Tesla.</h1>
-      <Songs></Songs>
-      <Player></Player>
+      <Songs currentsong={currentsong}></Songs>
+      <Player currentsong={currentsong} isplaying={isplaying} setIsplaying={setIsplaying}></Player>
       </div>
   );
 }
