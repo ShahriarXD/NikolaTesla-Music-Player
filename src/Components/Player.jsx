@@ -15,27 +15,27 @@ const Player = ({currentsong , isplaying , setIsplaying}) => {
     audioRef.current.play();
     }
   };
-    const [songInfo, setSongInfo] = useState({
+  const [songTime , setSingTime] = useState({
     currentTime : null,
     duration : null
   });
-
   const timeUpdateHandler = (e) => {
-    const current = e.target.currentTime;
-    const duration = e.target.duration;
-    setSongInfo({...songInfo, currentTime:current, duration:duration});
+    const startTime = e.target.currentTime
+    const endTime = e.target.duration;
+    setSingTime({...songTime , currentTime : startTime , duration : endTime});
   }
-  const getTime = (time) => {
-    return(
-    Math.floor(time/60) + ":" + ("0" + Math.floor(time%60)).slice(-2)
-    );
-  };
+   // time formating
+  const getSongTime = (time) => {
+    return (
+      Math.floor(time/60) + ":" + ("0" + Math.floor(time%60)).slice(-2)
+    )
+  }
   return (
     <div className="player">
       <div className="time-control">
-        <p id ="start-time">{getTime(songInfo.currentTime)}</p>
+        <p id ="start-time">{getSongTime(songTime.currentTime)}</p>
         <input type="range" name="" id="" />
-        <p id ="end-time">{getTime(songInfo.duration)}</p>
+        <p id ="end-time">{getSongTime(songTime.duration)}</p>
         </div>
         <div className="play-control">
           <FontAwesomeIcon className="previous" icon={faAngleLeft} size="2x"></FontAwesomeIcon>
@@ -43,7 +43,11 @@ const Player = ({currentsong , isplaying , setIsplaying}) => {
           <FontAwesomeIcon className="forward" icon={faAngleRight} size="2x"></FontAwesomeIcon>
         </div>
         <div>
-          <audio onTimeUpdate={timeUpdateHandler} src={currentsong.mp3} ref={audioRef}></audio>
+          <audio 
+          onTimeUpdate={timeUpdateHandler} 
+          onLoadedMetadata={timeUpdateHandler}
+          src={currentsong.mp3} 
+          ref={audioRef}></audio>
         </div>
     </div>
   );
