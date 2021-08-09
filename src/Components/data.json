@@ -7,7 +7,8 @@
     "time": "3:36",
     "active": true,
     "img" : "https://f4.bcbits.com/img/a2468028165_10.jpg",
-    "mp3" : "https://cdn.discordapp.com/attachments/550242758141542407/873978328225288232/Linkin_Park_-_In_The_End_Mellen_Gi__Tommee_Profitt_Remix.mp3"
+    "mp3" : "https://cdn.discordapp.com/attachments/550242758141542407/873978328225288232/Linkin_Park_-_In_The_End_Mellen_Gi__Tommee_Profitt_Remix.mp3",
+    "id" : 55
   },
   {
     "Name": "In the End",
@@ -18,7 +19,8 @@
     "active": true,
     "img" : "https://f4.bcbits.com/img/a2468028165_10.jpg",
     "mp31" : "https://mp3.chillhop.com/serve.php/?mp3=21647",
-    "mp3" : "https://cdn.discordapp.com/attachments/550242758141542407/873977833242886174/Tesher_x_Jason_Derulo_-_Jalebi_Baby_Official_Video.mp3"
+    "mp3" : "https://cdn.discordapp.com/attachments/550242758141542407/873977833242886174/Tesher_x_Jason_Derulo_-_Jalebi_Baby_Official_Video.mp3",
+    "id" : 525
   },
   {
     "Name": "Loco",
@@ -26,7 +28,9 @@
     "Album": "Loco",
     "Album_link": "https://open.spotify.com/collection/tracks/album/1E40DQL9uyoEXB8fy1jsbq",
     "time": "3:52",
-    "active": false
+    "img" : "https://f4.bcbits.com/img/a2468028165_10.jpg",
+    "active": false,
+    "id" : 5523
   },
   {
     "Name": "Remember the Name (feat. Styles of Beyond)",
@@ -34,7 +38,9 @@
     "Album": "The Rising Tied",
     "Album_link": "https://open.spotify.com/collection/tracks/album/1YIAli70SqLNnmSJZjlVpr",
     "time": "3:50",
-    "active": false
+    "img" : "https://f4.bcbits.com/img/a2468028165_10.jpg",
+    "active": false,
+    "id" : 5534234
   },
   {
     "Name": "Baatein Ye Kabhi Na - Male",
@@ -42,7 +48,9 @@
     "Album": "Khamoshiyan (Original Motion Picture Soundtrack)",
     "Album_link": "https://open.spotify.com/collection/tracks/album/6mJIpY6r2SzZbLN3ClYCbb",
     "time": "4:49",
-    "active": false
+    "img" : "https://f4.bcbits.com/img/a2468028165_10.jpg",
+    "active": false,
+    "id" : "553432"
   },
   {
     "Name": "Tu Har Lamha",
@@ -50,7 +58,9 @@
     "Album": "Khamoshiyan (Original Motion Picture Soundtrack)",
     "Album_link": "https://open.spotify.com/collection/tracks/album/6mJIpY6r2SzZbLN3ClYCbb",
     "time": "4:32",
-    "active": false
+    "img" : "https://f4.bcbits.com/img/a2468028165_10.jpg",
+    "active": false,
+    "id" : "553423"
   },
   {
     "Name": "Srotoshinni",
@@ -58,7 +68,9 @@
     "Album": "Chinho",
     "Album_link": "https://open.spotify.com/collection/tracks/album/0vZmdjJWdFkA0YI4w8qXhl",
     "time": "4:23",
-    "active": false
+    "img" : "https://f4.bcbits.com/img/a2468028165_10.jpg",
+    "active": false,
+    "id" : "5543"
   },
   {
     "Name": "Been On",
@@ -66,6 +78,8 @@
     "Album": "These Things Happen",
     "Album_link": "https://open.spotify.com/collection/tracks/album/6wDc63NhKy2PyXdbhkRmrl",
     "time": "3:28",
-    "active": false
+    "img" : "https://f4.bcbits.com/img/a2468028165_10.jpg",
+    "active": false,
+    "id" : "55333"
   }
   ]

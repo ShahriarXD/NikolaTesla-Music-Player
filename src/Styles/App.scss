@@ -4,8 +4,14 @@
   box-sizing: border-box;
   background-color: lightcyan;
 }
+
+body {
+  font-family: "Exo", sans-serif;
+  font-family: "Shadows Into Light", cursive;
+}
 @import "./player";
 @import "./songs";
+@import "./library";
 
 #sexy {
   text-align: center;

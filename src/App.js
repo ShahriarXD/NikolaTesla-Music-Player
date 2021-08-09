@@ -3,7 +3,7 @@ import './Styles/App.scss';
 import Songs from './Components/Songs';
 import Player from './Components/Player';
 import Data from './Components/data.json'
-
+import Library from './Components/Library';
 
 function App() {
   const [song , setSong] = React.useState(Data)  //Full Data Access 
@@ -14,6 +14,7 @@ function App() {
       <h1 id="sexy">Music Player By Nikola Tesla.</h1>
       <Songs currentsong={currentsong}></Songs>
       <Player currentsong={currentsong} isplaying={isplaying} setIsplaying={setIsplaying}></Player>
+      <Library songs={song} setCurrentsong={setCurrentsong}/>
       </div>
   );
 }
