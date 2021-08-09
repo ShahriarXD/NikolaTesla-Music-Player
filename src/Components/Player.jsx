@@ -1,23 +1,23 @@
 import React, {useRef ,useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlayCircle , faAngleRight,  faAngleLeft} from '@fortawesome/free-solid-svg-icons'
+import { faPlayCircle , faAngleRight,  faAngleLeft , faPause} from '@fortawesome/free-solid-svg-icons'
 
 
 
 const Player = ({currentsong , isplaying , setIsplaying}) => {
-  const audioRef = useRef(null);
+  const audioRef = useRef(null);  // useRef to store the audio element
   const playSongHandler= () => {
-    if (isplaying) {
+    if (isplaying) {   // if the player is playing, pause it
       setIsplaying(false);
-    audioRef.current.pause();
+    audioRef.current.pause();  // pause the audio
     }else {
       setIsplaying(true);
-    audioRef.current.play();
+    audioRef.current.play();  // play the audio
     }
   };
   const [songTime , setSingTime] = useState({
-    currentTime : null,
-    duration : null
+    currentTime : 0,
+    duration : 0
   });
   const timeUpdateHandler = (e) => {
     const startTime = e.target.currentTime
@@ -32,9 +32,8 @@ const Player = ({currentsong , isplaying , setIsplaying}) => {
   }
   //Drag handeler
   const dragHandler = (e) => {
-    setSingTime({...songTime , currentTime : e.target.value})
+    setSingTime({...songTime , currentTime : e.target.value });
     audioRef.current.currentTime = e.target.value;
-    console.log(e.target.value)
   }
   return (
     <div className="player">
@@ -50,7 +49,7 @@ const Player = ({currentsong , isplaying , setIsplaying}) => {
         </div>
         <div className="play-control">
           <FontAwesomeIcon className="previous" icon={faAngleLeft} size="2x"></FontAwesomeIcon>
-          <FontAwesomeIcon className="play" icon={faPlayCircle} size="2x" onClick={playSongHandler}></FontAwesomeIcon>
+          <FontAwesomeIcon className="play" icon={isplaying ? faPause : faPlayCircle} size="2x" onClick={playSongHandler}></FontAwesomeIcon>
           <FontAwesomeIcon className="forward" icon={faAngleRight} size="2x"></FontAwesomeIcon>
         </div>
         <div>

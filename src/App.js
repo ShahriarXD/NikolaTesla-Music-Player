@@ -6,9 +6,9 @@ import Data from './Components/data.json'
 
 
 function App() {
-  const [song , setSong] = React.useState(Data)
-  const [currentsong , setCurrentsong] = React.useState(song[0])
-  const [isplaying , setIsplaying] = React.useState(false)
+  const [song , setSong] = React.useState(Data)  //Full Data Access 
+  const [currentsong , setCurrentsong] = React.useState(song[0])// We are setting the first song as the current song
+  const [isplaying , setIsplaying] = React.useState(false) // 
   return (
     <div className="container">
       <h1 id="sexy">Music Player By Nikola Tesla.</h1>
